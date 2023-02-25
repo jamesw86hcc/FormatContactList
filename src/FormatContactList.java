@@ -5,6 +5,14 @@ import java.nio.file.Paths;
 import java.util.Formatter;
 import java.util.Scanner;
 
+/*James Williams
+*2/24/2023
+*
+* The purpose of this project is to enhance skills with reading to, writing from, and formating files
+* in Java. It takes a list of comma separated values from 'contacts.txt' and formats them into
+* a more human-readable version in 'formatted-contacts.txt'.
+* */
+
 public class FormatContactList {
 
     public static void main(String[] args) throws IOException {
@@ -13,12 +21,6 @@ public class FormatContactList {
 
         try (Formatter formatter = new Formatter(outputFilePath.toFile())) {
             try (Scanner input = new Scanner(contactFile)) {
-
-                String last_name = "";
-                String first_name = "";
-                String email = "";
-
-                File endfile = new File("filename.txt");
 
                 while (input.hasNext()) {
                     String linex = input.nextLine();
